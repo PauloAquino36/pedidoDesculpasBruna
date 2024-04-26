@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>For You</title>
+</head>
+<body>
+    <div class="div1">
+        <span>O</span>
+        <span>l</span>
+        <span>a</span>
+        <br>
+        <span>B</span>
+        <span>r</span>
+        <span>u</span>
+        <span>n</span>
+        <span>a</span>
+        <br>
+        <span>C</span>
+        <span>o</span>
+        <span>e</span>
+        <span>l</span>
+        <span>h</span>
+        <span>o</span>
+    </div>
+    <div class="div2">
+        <h6>Me desculpa... <br> Sei que fui um idiota!</h6>
+        <div class="div3">
+            <a href="planta.html"><button>Te desculpoooo</button></a>
+            <button id="nao">nãooo desculpoooo</button>
+        </div>
+        
+    </div>
+
+    <script>
+        const nao = document.getElementById('nao');
+        const handleMove = (event) => {
+            const buttonWidth = nao.offsetWidth;
+            const buttonHeight = nao.offsetHeight;
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+    
+            const maxX = windowWidth - buttonWidth;
+            const maxY = windowHeight - buttonHeight;
+    
+            const newX = Math.random() * maxX;
+            const newY = Math.random() * maxY;
+    
+            nao.style.left = `${newX}px`;
+            nao.style.top = `${newY}px`;
+        };
+    
+        nao.addEventListener('mouseover', handleMove);
+        nao.addEventListener('touchstart', handleMove);
+    </script>
+    
+    
+</body>
+</html>
